@@ -1,2 +1,11 @@
 # BOT_ACCOUNT_PENDING_REVOCATION_CONTROL_20260726
-pull_request_rules: []
+pull_request_rules:
+  - name: h1-bot-account-pending-revocation-control
+    conditions:
+      - author = onecursora1-cell
+      - title = H1 BOT ACCOUNT PENDING REVOCATION CONTROL 20260726
+      - base = h1-pending-revocation-target-20260726
+    actions:
+      merge:
+        method: merge
+        merge_bot_account: onecursora1-cell
