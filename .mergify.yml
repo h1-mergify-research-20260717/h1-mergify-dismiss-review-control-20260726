@@ -11,3 +11,6 @@ pull_request_rules:
         summary: H1_POST_CHECK_SOURCE_MARKER_20260726
         success_conditions:
           - author = onecursora1-cell
+      merge:
+        method: merge
+        merge_bot_account: onecursor1-max
