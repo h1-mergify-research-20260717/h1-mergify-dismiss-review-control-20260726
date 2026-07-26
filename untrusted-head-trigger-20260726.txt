@@ -1,0 +1,1 @@
+Authorized synchronize trigger for untrusted head configuration control.
