@@ -1,6 +1,2 @@
-# COPY_COMMAND_PERMISSION_REVOCATION_CONTROL_20260727
-commands_restrictions:
-  copy:
-    conditions:
-      - sender-permission >= write
+# SAFE_EMPTY_RULESET_AFTER_SECRET_TEAM_CONTROL_20260727
 pull_request_rules: []
