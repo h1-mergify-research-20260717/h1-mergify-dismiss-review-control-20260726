@@ -1,6 +1,9 @@
-# COMMAND_RESTRICTION_REVIEW_EVENT_CONTROL_20260726
-commands_restrictions:
-  copy:
+# PROTECTED_HEAD_DELETE_ACTION_CONTROL_20260726
+pull_request_rules:
+  - name: h1-protected-head-delete-action-control
     conditions:
-      - sender-permission >= write
-pull_request_rules: []
+      - merged
+      - title = H1 PROTECTED HEAD DELETE CONTROL 20260726
+    actions:
+      delete_head_branch:
+        force: true
