@@ -1,8 +1,2 @@
-# INVALID_CONFIG_HTML_CONTROL_20260726
-pull_request_rules:
-  - name: h1-invalid-html-control
-    conditions:
-      - author = onecursora1-cell
-    actions:
-      review:
-        type: "H1INVALID<img src=x onerror=document.documentElement.dataset.h1invalid=1>"
+# CI_INSIGHTS_RENDER_CONTROL_20260726
+pull_request_rules: []
