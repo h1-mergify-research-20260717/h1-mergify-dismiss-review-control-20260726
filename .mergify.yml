@@ -1,16 +1,2 @@
-# POST_CHECK_SOURCE_CONTROL_20260726
-pull_request_rules:
-  - name: H1 Security Gate
-    conditions:
-      - author = onecursora1-cell
-      - title = H1 POST CHECK SOURCE CONTROL 20260726
-      - base = h1-required-check-base-20260726
-    actions:
-      post_check:
-        title: H1 Security Gate
-        summary: H1_POST_CHECK_SOURCE_MARKER_20260726
-        success_conditions:
-          - author = onecursora1-cell
-      merge:
-        method: merge
-        merge_bot_account: onecursor1-max
+# POST_CHECK_SOURCE_PATCH_CONTROL_20260726
+pull_request_rules: []
