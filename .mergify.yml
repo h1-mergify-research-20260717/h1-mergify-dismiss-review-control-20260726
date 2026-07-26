@@ -1,2 +1,10 @@
-# PROTECTED_BRANCH_REWRITE_CONTROL_20260726
-pull_request_rules: []
+# PROTECTED_SQUASH_CONTROL_20260726
+pull_request_rules:
+  - name: h1-protected-squash-control
+    conditions:
+      - author = onecursora1-cell
+      - title = H1 PROTECTED SQUASH CONTROL 20260726
+      - base = h1-squash-target-20260726
+    actions:
+      squash:
+        commit_message: all-commits
