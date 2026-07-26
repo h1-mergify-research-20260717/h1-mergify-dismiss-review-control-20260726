@@ -1,10 +1,2 @@
-# SECRET_TEAM_MEMBER_ENUM_PERMISSION_CONTROL_20260726
-pull_request_rules:
-  - name: h1-secret-team-member-enum-permission-control
-    conditions:
-      - author = onecursora1-cell
-      - title = H1 SECRET TEAM MEMBER ENUM CONTROL 20260726
-    actions:
-      request_reviews:
-        users_from_teams:
-          - h1-secret-member-enum-20260726
+# SAFE_EMPTY_RULESET_AFTER_SECRET_TEAM_CONTROL_20260727
+pull_request_rules: []
