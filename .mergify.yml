@@ -1,11 +1,2 @@
-# AUTHORIZED_DISMISS_REVIEW_CONTROL_20260727
-pull_request_rules:
-  - name: dismiss change requests on synchronize
-    conditions:
-      - base = main
-    actions:
-      dismiss_reviews:
-        approved: false
-        changes_requested: true
-        message: AUTHORIZED_MERGIFY_DISMISS_CONTROL_20260727
-        when: always
+# SAFE_EMPTY_RULESET_AFTER_SECRET_TEAM_CONTROL_20260727
+pull_request_rules: []
