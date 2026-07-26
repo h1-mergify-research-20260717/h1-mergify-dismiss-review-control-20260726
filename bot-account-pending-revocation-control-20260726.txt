@@ -1,0 +1,1 @@
+Authorized pending bot-account permission revocation control.
