@@ -1,10 +1,10 @@
-# BOT_ACCOUNT_REVOCATION_PRE_CONTROL_20260726
+# BOT_ACCOUNT_REVOCATION_POST_CONTROL_20260726
 pull_request_rules:
-  - name: h1-bot-account-revocation-pre-control
+  - name: h1-bot-account-revocation-post-control
     conditions:
       - author = onecursor1-max
-      - title = H1 BOT ACCOUNT REVOCATION PRE CONTROL 20260726
-      - base = h1-bot-revocation-pre-target-20260726
+      - title = H1 BOT ACCOUNT REVOCATION POST CONTROL 20260726
+      - base = h1-bot-revocation-post-target-20260726
     actions:
       merge:
         method: merge
