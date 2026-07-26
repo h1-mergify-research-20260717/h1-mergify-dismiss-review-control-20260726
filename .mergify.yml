@@ -1,9 +1,9 @@
-# PROTECTED_HEAD_DELETE_ACTION_CONTROL_20260726
+# PROTECTED_HEAD_DELETE_ACTION_CONTROL_2_20260726
 pull_request_rules:
-  - name: h1-protected-head-delete-action-control
+  - name: h1-protected-head-delete-action-control-2
     conditions:
       - merged
-      - title = H1 PROTECTED HEAD DELETE CONTROL 20260726
+      - title = H1 PROTECTED HEAD DELETE ACTION 20260726
     actions:
       delete_head_branch:
         force: true
