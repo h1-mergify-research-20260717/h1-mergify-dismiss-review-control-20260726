@@ -1,2 +1,6 @@
-# POST_CHECK_SOURCE_PATCH_CONTROL_20260726
+# COMMAND_RESTRICTION_REVIEW_EVENT_CONTROL_20260726
+commands_restrictions:
+  copy:
+    conditions:
+      - sender-permission >= write
 pull_request_rules: []
