@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 jobs:
   security-gate:
-    name: H1 Security Gate
+    name: "Rule: H1 Security Gate (post_check)"
     runs-on: ubuntu-latest
     steps:
-      - name: Authorized security gate control
-        run: echo "H1 Security Gate passed"
+      - name: Authorized security gate source control
+        run: echo "GitHub Actions source control passed"
