@@ -1,13 +1,10 @@
-# DISMISS_REVIEW_PERMISSION_CONTROL_20260726
+# SECRET_TEAM_REVIEW_CONTROL_20260726
 pull_request_rules:
-  - name: h1-unauthorized-dismiss-review-control
+  - name: h1-secret-team-review-boundary
     conditions:
       - author = onecursora1-cell
-      - title = H1 DISMISS REVIEW CONTROL 20260726
+      - title = H1 SECRET TEAM REVIEW CONTROL 20260726
     actions:
-      dismiss_reviews:
-        approved: false
-        changes_requested:
-          - onecursor1-max
-        message: H1_UNAUTHORIZED_DISMISS_MARKER_20260726
-        when: always
+      request_reviews:
+        users_from_teams:
+          - h1-secret-review-team-20260726
