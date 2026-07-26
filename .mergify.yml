@@ -1,6 +1,2 @@
-# EDITED_COMMENT_COMMAND_TOCTOU_CONTROL_20260726
-commands_restrictions:
-  copy:
-    conditions:
-      - sender-permission >= write
+# PROTECTED_BRANCH_REWRITE_CONTROL_20260726
 pull_request_rules: []
