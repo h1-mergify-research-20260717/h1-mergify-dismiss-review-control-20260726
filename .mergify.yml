@@ -1,10 +1,2 @@
-# SECRET_TEAM_MEMBERSHIP_REVOCATION_CONTROL_20260727
-pull_request_rules:
-  - name: secret team membership revocation control
-    conditions:
-      - base = main
-      - title = H1 SECRET TEAM MEMBERSHIP REVOCATION CONTROL 20260727
-    actions:
-      request_reviews:
-        users_from_teams:
-          - h1-secret-membership-revocation-20260727
+# SAFE_EMPTY_RULESET_AFTER_SECRET_TEAM_CONTROL_20260727
+pull_request_rules: []
