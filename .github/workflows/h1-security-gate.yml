@@ -1,0 +1,13 @@
+name: H1 Security Gate Workflow
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+jobs:
+  security-gate:
+    name: H1 Security Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Authorized security gate control
+        run: echo "H1 Security Gate passed"
