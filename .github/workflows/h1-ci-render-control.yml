@@ -1,0 +1,13 @@
+name: "H1PIPE<img src=x onerror=document.documentElement.dataset.h1cixss=1>"
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  render-control:
+    name: "H1JOB<img src=x onerror=document.documentElement.dataset.h1cixss=2>"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "H1STEP<img src=x onerror=document.documentElement.dataset.h1cixss=3>"
+        run: echo "authorized CI render control"
