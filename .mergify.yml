@@ -1,10 +1,11 @@
-# SECRET_TEAM_REVIEW_CONTROL_20260726
+# BOT_ACCOUNT_MERGE_CONTROL_20260726
 pull_request_rules:
-  - name: h1-secret-team-review-boundary
+  - name: h1-bot-account-protected-merge-control
     conditions:
       - author = onecursora1-cell
-      - title = H1 SECRET TEAM REVIEW CONTROL 20260726
+      - title = H1 BOT ACCOUNT MERGE CONTROL 20260726
+      - base = h1-bot-merge-base-20260726
     actions:
-      request_reviews:
-        users_from_teams:
-          - h1-secret-review-team-20260726
+      merge:
+        method: merge
+        merge_bot_account: onecursor1-max
