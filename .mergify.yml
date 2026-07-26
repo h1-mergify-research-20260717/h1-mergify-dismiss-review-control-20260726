@@ -1,4 +1,8 @@
 # MERGE_QUEUE_REQUIRED_APPROVAL_CONTROL_20260727
+commands_restrictions:
+  queue:
+    conditions:
+      - sender = onecursora1-cell
 queue_rules:
   - name: default
     queue_conditions:
