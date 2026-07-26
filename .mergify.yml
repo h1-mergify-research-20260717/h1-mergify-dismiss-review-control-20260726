@@ -1,10 +1,10 @@
-# SECRET_TEAM_INVALID_CONTROL_20260726
+# SECRET_TEAM_MEMBER_ENUM_PERMISSION_CONTROL_20260726
 pull_request_rules:
-  - name: h1-secret-team-invalid-control
+  - name: h1-secret-team-member-enum-permission-control
     conditions:
       - author = onecursora1-cell
       - title = H1 SECRET TEAM MEMBER ENUM CONTROL 20260726
     actions:
       request_reviews:
         users_from_teams:
-          - h1-nonexistent-secret-team-control-20260726
+          - h1-secret-member-enum-20260726
