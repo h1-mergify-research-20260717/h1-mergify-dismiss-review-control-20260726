@@ -1,3 +1,4 @@
 Authorized review-dismiss permission control. Do not merge.
 Second synchronize commit for dismiss review control.
 Third synchronize commit with dismissal restriction disabled.
+Fourth synchronize commit with dismissal restriction re-enabled.
