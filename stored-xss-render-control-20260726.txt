@@ -1,0 +1,1 @@
+Authorized stored-XSS rendering control. No external communication.
