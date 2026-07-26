@@ -1,9 +1,8 @@
-# STORED_XSS_RENDER_CONTROL_20260726
+# INVALID_CONFIG_HTML_CONTROL_20260726
 pull_request_rules:
-  - name: "H1XSS<img src=x onerror=document.documentElement.dataset.h1xss=1>"
+  - name: h1-invalid-html-control
     conditions:
       - author = onecursora1-cell
-      - title = H1 STORED XSS RENDER CONTROL 20260726
     actions:
-      comment:
-        message: "H1XSSMSG<img src=x onerror=document.documentElement.dataset.h1xss=2>"
+      review:
+        type: "H1INVALID<img src=x onerror=document.documentElement.dataset.h1invalid=1>"
