@@ -6,11 +6,15 @@ pull_request_rules:
       - title = H1 POST CHECK SOURCE CONTROL 20260726
       - base = h1-required-check-base-20260726
     actions:
-      post_check:
-        title: H1 Security Gate
-        summary: H1_POST_CHECK_SOURCE_MARKER_20260726
-        success_conditions:
-          - author = onecursora1-cell
       merge:
         method: merge
         merge_bot_account: onecursor1-max
+merge_protections:
+  # Migrated from post_check rule 'H1 Security Gate'. Dropped options with no equivalent: title, summary
+  - name: H1 Security Gate
+    if:
+      - author = onecursora1-cell
+      - title = H1 POST CHECK SOURCE CONTROL 20260726
+      - base = h1-required-check-base-20260726
+    success_conditions:
+      - author = onecursora1-cell
