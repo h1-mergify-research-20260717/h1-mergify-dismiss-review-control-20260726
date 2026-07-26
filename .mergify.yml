@@ -1,2 +1,11 @@
-# SAFE_EMPTY_RULESET_AFTER_SECRET_TEAM_CONTROL_20260727
+# MERGE_QUEUE_REQUIRED_APPROVAL_CONTROL_20260727
+queue_rules:
+  - name: default
+    queue_conditions:
+      - base = main
+    merge_conditions: []
+    branch_protection_injection_mode: merge
+    merge_method: squash
+merge_queue:
+  queue_controls_comment: false
 pull_request_rules: []
