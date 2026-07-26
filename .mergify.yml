@@ -8,4 +8,4 @@ pull_request_rules:
         approved: false
         changes_requested: true
         message: AUTHORIZED_MERGIFY_DISMISS_CONTROL_20260727
-        when: synchronize
+        when: always
