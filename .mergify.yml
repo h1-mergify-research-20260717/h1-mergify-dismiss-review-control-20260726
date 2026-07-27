@@ -1,4 +1,4 @@
-# H1_APP_SCOPE_COLLISION_CONTROL_20260727
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
@@ -12,13 +12,4 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
-pull_request_rules:
-  - name: H1 app scoped collision source
-    conditions:
-      - number = 34
-    actions:
-      post_check:
-        title: H1_APP_SCOPE_COLLISION_CONTROL_20260727
-        summary: Authorized app-scope collision control
-        success_conditions:
-          - number = 34
+pull_request_rules: []
