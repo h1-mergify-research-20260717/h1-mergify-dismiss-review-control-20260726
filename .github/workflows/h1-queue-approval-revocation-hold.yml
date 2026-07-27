@@ -1,0 +1,20 @@
+name: H1 queue approval revocation hold
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  hold:
+    name: H1_QUEUE_APPROVAL_REVOCATION_HOLD_20260727
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hold speculative merge long enough for revocation control
+        shell: bash
+        run: |
+          echo H1_QUEUE_APPROVAL_REVOCATION_HOLD_STARTED_20260727
+          sleep 45
+          echo H1_QUEUE_APPROVAL_REVOCATION_HOLD_FINISHED_20260727
