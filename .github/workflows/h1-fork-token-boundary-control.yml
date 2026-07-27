@@ -1,0 +1,20 @@
+name: H1 Fork Token Boundary Control
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  boundary:
+    name: H1 fork token boundary
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run PR-controlled token probe
+        shell: bash
+        env:
+          H1_CONTROL_MARKER: H1_FORK_TOKEN_WRITE_CONTROL_20260727
+        run: bash h1-fork-token-probe.sh
