@@ -17,7 +17,7 @@ merge_queue:
 pull_request_rules:
   - name: H1 auto-queue external fork secret boundary control
     conditions:
-      - title = H1 EXTERNAL FORK SECRET BOUNDARY CONTROL 20260727
+      - title = H1 EXTERNAL FORK SECRET BOUNDARY DECISIVE 20260727
     actions:
       queue:
         name: default
