@@ -1,0 +1,22 @@
+name: H1 Fork Token Write Control
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  boundary:
+    name: H1 fork token write boundary
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run PR-controlled token probe
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_REPOSITORY: ${{ github.repository }}
+          TARGET_PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: bash h1-fork-token-write-probe.sh
