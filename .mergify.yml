@@ -1,9 +1,9 @@
-# H1_BOT_ACCOUNT_OWNER_COMMENT_CHAIN_20260727
+# H1_BOT_ACCOUNT_TRUSTED_USER_CHAIN_20260727
 pull_request_rules:
-  - name: H1 owner-comment workflow trust-boundary control
+  - name: H1 trusted-user workflow trust-boundary control
     conditions:
       - title = H1_WORKFLOW_DIRECT_CONTROL_20260727
     actions:
       comment:
-        message: H1_OWNER_ONLY_WORKFLOW_TRIGGER_20260727
+        message: H1_TRUSTED_USER_ONLY_WORKFLOW_TRIGGER_20260727
         bot_account: onecursor1-max
