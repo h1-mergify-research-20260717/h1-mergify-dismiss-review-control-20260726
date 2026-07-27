@@ -12,25 +12,3 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
-pull_request_rules:
-  - name: H1 cross-tenant default processing control
-    conditions:
-      - title = H1_CROSS_TENANT_DEFAULT_CONTROL_20260727
-    actions:
-      comment:
-        message: H1_CROSS_TENANT_DEFAULT_MARKER_20260727
-  - name: H1 interaction-limit bot account control
-    conditions:
-      - title = H1_CROSS_TENANT_BOT_ACCOUNT_CONTROL_20260727
-    actions:
-      comment:
-        message: H1_INTERACTION_LIMIT_BYPASS_MARKER_20260727
-        bot_account: onecursora1-cell
-  - name: H1 cross-tenant review-limit approval control
-    conditions:
-      - title = H1_CROSS_TENANT_REVIEW_LIMIT_APPROVE_20260727
-    actions:
-      review:
-        type: APPROVE
-        message: H1_CROSS_TENANT_APPROVAL_MARKER_20260727
-        bot_account: onecursora1-cell
