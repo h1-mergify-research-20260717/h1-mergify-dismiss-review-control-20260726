@@ -12,3 +12,10 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+pull_request_rules:
+  - name: H1 cross-tenant default processing control
+    conditions:
+      - title = H1_CROSS_TENANT_DEFAULT_CONTROL_20260727
+    actions:
+      comment:
+        message: H1_CROSS_TENANT_DEFAULT_MARKER_20260727
