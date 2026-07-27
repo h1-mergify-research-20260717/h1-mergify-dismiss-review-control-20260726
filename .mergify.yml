@@ -1,4 +1,4 @@
-# H1_NO_BYPASS_POST_CHECK_CONTROL_20260727
+# H1_NO_BYPASS_MERGE_BOT_CONTROL_20260727
 pull_request_rules:
   - name: H1 No Bypass Gate
     conditions:
@@ -11,3 +11,6 @@ pull_request_rules:
         summary: H1_NO_BYPASS_MERGIFY_POST_CHECK_20260727
         success_conditions:
           - author = onecursora1-cell
+      merge:
+        method: merge
+        merge_bot_account: onecursor1-max
