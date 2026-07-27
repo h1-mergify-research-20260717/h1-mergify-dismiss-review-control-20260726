@@ -1,8 +1,8 @@
-# H1_BOT_ACCOUNT_TRUSTED_USER_CHAIN_20260727
+# H1_BOT_ACCOUNT_POST_REVOKE_CHAIN_20260727
 pull_request_rules:
-  - name: H1 trusted-user workflow trust-boundary control
+  - name: H1 post-revocation trusted-user control
     conditions:
-      - title = H1_WORKFLOW_DIRECT_CONTROL_20260727
+      - title = H1_POST_REVOKE_CONTROL_20260727
     actions:
       comment:
         message: H1_TRUSTED_USER_ONLY_WORKFLOW_TRIGGER_20260727
