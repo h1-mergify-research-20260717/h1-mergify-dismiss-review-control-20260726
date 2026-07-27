@@ -4,7 +4,7 @@ queue_rules:
     queue_conditions:
       - base = main
     merge_conditions:
-      - check-success = @github-actions/H1 fork token boundary
+      - check-success = @github-actions/H1 fork token write boundary
       - label = H1_NEVER_MERGE_FORK_TOKEN_20260727
     branch_protection_injection_mode: merge
     merge_method: squash
