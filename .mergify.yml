@@ -13,9 +13,10 @@ queue_rules:
 merge_queue:
   queue_controls_comment: false
 pull_request_rules:
-  - name: H1 most recent push approval merge control
+  - name: H1 most recent push approval merge control v2
     conditions:
-      - title = H1 MOST RECENT PUSH APPROVAL CONTROL 20260727
+      - title = H1 MOST RECENT PUSH APPROVAL CONTROL V2 20260727
+      - body = H1_MOST_RECENT_PUSH_TRIGGER_20260727
     actions:
       merge:
         method: squash
