@@ -1,16 +1,2 @@
-# H1_NO_BYPASS_MERGE_BOT_CONTROL_20260727
-pull_request_rules:
-  - name: H1 No Bypass Gate
-    conditions:
-      - author = onecursora1-cell
-      - title = H1 NO BYPASS POST CHECK CONTROL 20260727
-      - base = h1-no-bypass-base-20260727
-    actions:
-      post_check:
-        title: H1 No Bypass Gate
-        summary: H1_NO_BYPASS_MERGIFY_POST_CHECK_20260727
-        success_conditions:
-          - author = onecursora1-cell
-      merge:
-        method: merge
-        merge_bot_account: onecursor1-max
+# SAFE_EMPTY_RULESET_AFTER_BOT_ACCOUNT_CONTROL_20260727
+pull_request_rules: []
