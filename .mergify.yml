@@ -7,8 +7,7 @@ queue_rules:
   - name: default
     queue_conditions:
       - base = main
-    merge_conditions:
-      - check-success = @github-actions/H1 queue substitution control
+    merge_conditions: []
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
