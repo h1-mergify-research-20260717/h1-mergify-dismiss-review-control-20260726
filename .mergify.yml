@@ -1,2 +1,11 @@
-# SAFE_EMPTY_RULESET_AFTER_BOT_ACCOUNT_CONTROL_20260727
-pull_request_rules: []
+# H1_CROSS_USER_OAUTH_CURRENT_RETEST_20260727
+pull_request_rules:
+  - name: h1-cross-user-oauth-current-self-approval
+    conditions:
+      - author = onecursor3-gif
+      - title = H1 CROSS USER OAUTH CURRENT SELF APPROVAL 20260727
+    actions:
+      review:
+        type: APPROVE
+        message: H1_CROSS_USER_OAUTH_CURRENT_APPROVAL_MARKER_20260727
+        bot_account: onecursor1-max
