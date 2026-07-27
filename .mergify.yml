@@ -12,11 +12,3 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
-pull_request_rules:
-  - name: H1 OAuth revocation bot account control
-    conditions:
-      - title = H1_OAUTH_REVOKE_CONTROL_20260727
-    actions:
-      comment:
-        message: H1_OAUTH_REVOKE_BOT_ACCOUNT_MARKER_20260727
-        bot_account: onecursor1-max
