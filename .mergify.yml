@@ -7,8 +7,13 @@ queue_rules:
   - name: default
     queue_conditions:
       - base = main
-    merge_conditions: []
+    merge_conditions:
+      - check-success = @github-actions/H1 skip intermediate control
     branch_protection_injection_mode: merge
+    batch_size: 1
     merge_method: squash
 merge_queue:
+  mode: serial
+  max_parallel_checks: 2
+  skip_intermediate_results: true
   queue_controls_comment: false
