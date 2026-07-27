@@ -1,4 +1,4 @@
-# H1_FORK_SECRET_BOUNDARY_CONTROL_20260727
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
@@ -7,9 +7,7 @@ queue_rules:
   - name: default
     queue_conditions:
       - base = main
-    merge_conditions:
-      - check-success = @github-actions/H1 fork secret boundary
-      - label = H1_NEVER_MERGE_FORK_SECRET_20260727
+    merge_conditions: []
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
