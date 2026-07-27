@@ -1,0 +1,40 @@
+name: H1 PUBLIC TEST FAILURE OBJECT CONTROL 20260727
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  upload-public-failure:
+    name: H1_PUBLIC_FAILURE_JOB_20260727
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create public JUnit fixture
+        shell: bash
+        run: |
+          cat > report.xml <<'XML'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <testsuite name="H1_PUBLIC_FAILURE_SUITE_20260727" tests="1" failures="1" errors="0" skipped="0" time="0.01">
+            <testcase classname="h1.public.failure" name="H1_PUBLIC_TEST_FAILURE_OBJECT_20260727" time="0.01" file="tests/h1/public/failure.py" line="77">
+              <failure type="AssertionError" message="H1_PUBLIC_FAILURE_MESSAGE_20260727">H1_PUBLIC_STACKTRACE_20260727 at public/ci/control_test.py:77</failure>
+              <system-out>H1_PUBLIC_SYSTEM_OUTPUT_20260727</system-out>
+            </testcase>
+          </testsuite>
+          XML
+
+      - name: Upload public failure fixture
+        id: mergify-ci
+        continue-on-error: true
+        uses: Mergifyio/gha-mergify-ci@v24
+        with:
+          action: junit-process
+          token: ${{ secrets.H1_MERGIFY_CI_TEST_FAILURE_20260727 }}
+          report_path: report.xml
+          job_name: H1_PUBLIC_FAILURE_JOB_20260727
+
+      - name: Verify upload accepted
+        env:
+          UPLOAD_STATUS: ${{ steps.mergify-ci.outputs.test_results_upload }}
+        run: test "$UPLOAD_STATUS" = success
