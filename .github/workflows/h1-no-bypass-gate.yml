@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   required-check:
-    name: Rule: H1 No Bypass Gate (post_check)
+    name: "Rule: H1 No Bypass Gate (post_check)"
     runs-on: ubuntu-latest
     steps:
       - name: Emit authorized seed marker
