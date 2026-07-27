@@ -1,10 +1,2 @@
-# H1_SECRET_UNBOUND_TEAM_ENUM_CONTROL_20260727
-pull_request_rules:
-  - name: H1 secret unbound team member enumeration control
-    conditions:
-      - title = H1 SECRET UNBOUND TEAM ENUM CONTROL 20260727
-      - author = onecursora1-cell
-    actions:
-      request_reviews:
-        users_from_teams:
-          - h1-secret-unbound-20260727
+# SAFE_EMPTY_RULESET_AFTER_BOT_ACCOUNT_CONTROL_20260727
+pull_request_rules: []
