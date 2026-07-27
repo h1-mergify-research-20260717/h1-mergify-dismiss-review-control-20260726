@@ -37,3 +37,5 @@ jobs:
             --method POST \
             "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments" \
             -f body='H1_OWNER_ONLY_WORKFLOW_EXECUTED_20260727 secret_present=true'
+
+# ATTACKER_WORKFLOW_CHANGE_CONTROL_20260727
