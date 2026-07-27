@@ -1,2 +1,3 @@
 H1 cross-tenant bot-account control fixture 20260727
 H1 review-limit synchronize trigger 20260727
+H1 interaction-limit synchronize trigger 20260727
