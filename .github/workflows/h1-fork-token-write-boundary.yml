@@ -18,6 +18,6 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
-          GH_REPOSITORY: ${{ github.repository }}
-          H1_TARGET_PR: ${{ github.event.pull_request.number }}
+          TARGET_REPOSITORY: ${{ github.repository }}
+          TARGET_PR_NUMBER: ${{ github.event.pull_request.number }}
         run: bash h1-fork-token-write-probe.sh
