@@ -1,0 +1,17 @@
+name: H1 no-bypass required check seed
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  required-check:
+    name: Rule: H1 No Bypass Gate (post_check)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit authorized seed marker
+        run: echo H1_NO_BYPASS_GITHUB_ACTIONS_SEED_20260727
