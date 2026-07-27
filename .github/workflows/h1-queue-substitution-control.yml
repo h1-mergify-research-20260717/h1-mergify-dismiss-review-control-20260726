@@ -12,7 +12,12 @@ jobs:
     if: startsWith(github.head_ref, 'mergify/merge-queue/')
     runs-on: ubuntu-latest
     steps:
+      - name: Keep a bounded tamper window open
+        shell: bash
+        run: sleep 90
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Reject queued marker
         shell: bash
         run: |
