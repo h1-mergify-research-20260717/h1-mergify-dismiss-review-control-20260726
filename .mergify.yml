@@ -26,3 +26,11 @@ pull_request_rules:
       comment:
         message: H1_CROSS_TENANT_BOT_ACCOUNT_MARKER_20260727
         bot_account: onecursora1-cell
+  - name: H1 cross-tenant review-limit approval control
+    conditions:
+      - title = H1_CROSS_TENANT_REVIEW_LIMIT_APPROVE_20260727
+    actions:
+      review:
+        type: APPROVE
+        message: H1_CROSS_TENANT_APPROVAL_MARKER_20260727
+        bot_account: onecursora1-cell
