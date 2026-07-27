@@ -1,4 +1,4 @@
-name: H1 owner-comment authorization gate
+name: H1 trusted-user comment authorization gate
 
 on:
   issue_comment:
@@ -10,11 +10,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  owner-only:
+  trusted-user-only:
     if: >-
       github.event.issue.pull_request &&
-      github.event.comment.body == 'H1_OWNER_ONLY_WORKFLOW_TRIGGER_20260727' &&
-      github.event.comment.author_association == 'OWNER'
+      github.event.comment.body == 'H1_TRUSTED_USER_ONLY_WORKFLOW_TRIGGER_20260727' &&
+      github.event.comment.user.login == 'onecursor1-max'
     runs-on: ubuntu-latest
     steps:
       - name: Verify repository secret is available
@@ -24,16 +24,17 @@ jobs:
         run: |
           set -euo pipefail
           test -n "${H1_CANARY}"
-          printf '%s\n' 'H1_OWNER_ONLY_CODE_EXECUTION_20260727' >> "${GITHUB_STEP_SUMMARY}"
+          printf '%s\n' 'H1_TRUSTED_USER_ONLY_CODE_EXECUTION_20260727' >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Emit non-secret proof marker
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          TRUSTED_ACTOR: ${{ github.event.comment.user.login }}
         shell: bash
         run: |
           set -euo pipefail
           gh api \
             --method POST \
             "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/comments" \
-            -f body='H1_OWNER_ONLY_WORKFLOW_EXECUTED_20260727 secret_present=true'
+            -f body="H1_TRUSTED_USER_ONLY_WORKFLOW_EXECUTED_20260727 secret_present=true actor=${TRUSTED_ACTOR}"
