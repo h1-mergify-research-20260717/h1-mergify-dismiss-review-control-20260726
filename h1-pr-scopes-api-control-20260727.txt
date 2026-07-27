@@ -1,0 +1,2 @@
+Authorized Mergify PR scopes API control. Do not merge.
+
