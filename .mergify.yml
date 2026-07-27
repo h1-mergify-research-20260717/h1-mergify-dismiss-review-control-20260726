@@ -1,10 +1,10 @@
-# H1_FORK_TOKEN_WRITE_BOUNDARY_CONTROL_20260727
+# H1_FORK_TOKEN_BOUNDARY_CONTROL_20260727
 queue_rules:
   - name: default
     queue_conditions:
       - base = main
     merge_conditions:
-      - check-success = @github-actions/H1 fork token write boundary
+      - check-success = @github-actions/H1 fork token boundary
       - label = H1_NEVER_MERGE_FORK_TOKEN_20260727
     branch_protection_injection_mode: merge
     merge_method: squash
