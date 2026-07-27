@@ -1,0 +1,23 @@
+name: H1 Queue Substitution Control
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  h1-queue-substitution-control:
+    name: H1 queue substitution control
+    if: startsWith(github.head_ref, 'mergify/merge-queue/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject queued marker
+        shell: bash
+        run: |
+          if grep -R --fixed-strings --quiet 'H1_QUEUE_SUBSTITUTION_FAIL_20260727' h1-queue-substitution-control.txt 2>/dev/null; then
+            echo 'H1 queue substitution failure marker detected'
+            exit 1
+          fi
+          echo 'H1 queue substitution marker absent'
