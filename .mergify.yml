@@ -12,3 +12,10 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+pull_request_rules:
+  - name: H1 protected head deletion control
+    conditions:
+      - title = H1 PROTECTED HEAD DELETE CONTROL 20260727
+    actions:
+      delete_head_branch:
+        force: true
