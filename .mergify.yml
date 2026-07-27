@@ -19,3 +19,10 @@ pull_request_rules:
     actions:
       comment:
         message: H1_CROSS_TENANT_DEFAULT_MARKER_20260727
+  - name: H1 cross-tenant bot account control
+    conditions:
+      - title = H1_CROSS_TENANT_BOT_ACCOUNT_CONTROL_20260727
+    actions:
+      comment:
+        message: H1_CROSS_TENANT_BOT_ACCOUNT_MARKER_20260727
+        bot_account: onecursora1-cell
