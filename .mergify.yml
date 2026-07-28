@@ -1,4 +1,4 @@
-# H1_FREEZE_EXISTING_PR_REEVALUATION_CONTROL_20260728
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
@@ -12,11 +12,3 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
-merge_protections:
-  - name: H1 freeze existing PR reevaluation
-    if:
-      - base = main
-    success_conditions: true
-merge_protections_settings:
-  reporting_method: check-runs
-  post_comment: false
