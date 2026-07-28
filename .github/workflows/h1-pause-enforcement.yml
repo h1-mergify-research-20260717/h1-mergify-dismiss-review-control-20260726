@@ -1,17 +1,31 @@
-name: H1 pause enforcement hold
+name: H1 base ref freshness
 
 on:
   pull_request:
+  push:
+    branches:
+      - h1-alt-base-control-20260728
 
 permissions:
   contents: read
 
 jobs:
-  hold:
-    name: H1 pause enforcement hold
+  freshness:
+    name: H1 base ref freshness
     runs-on: ubuntu-latest
     steps:
-      - name: Hold long enough to pause queue
+      - uses: actions/checkout@v4
+      - name: Reject untested alternate-base tree
         run: |
-          sleep 90
-          echo "H1_PAUSE_ENFORCEMENT_CHECK_PASSED_20260728"
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            sleep 120
+            if [[ "${{ github.base_ref }}" == "h1-alt-base-control-20260728" ]]; then
+              echo "H1_BASE_RETARGET_ALT_PR_FAILED_20260728"
+              exit 1
+            fi
+          fi
+          if [[ "${{ github.event_name }}" == "push" && -f h1-base-retarget-source.txt ]]; then
+            echo "H1_BASE_RETARGET_ALT_PUSH_BROKEN_20260728"
+            exit 1
+          fi
+          echo "H1_BASE_RETARGET_SAFE_20260728"
