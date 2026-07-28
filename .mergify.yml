@@ -1,16 +1,4 @@
-# H1_SCOPE_SYNCHRONIZE_INVALIDATION_CONTROL_20260728
-scopes:
-  source:
-    files:
-      alpha:
-        include:
-          - h1-sync-alpha/**
-      beta:
-        include:
-          - h1-sync-beta/**
-  barrier_files:
-    include:
-      - h1-sync-barrier/**
+# H1_SOURCE_HEAD_FRESHNESS_CONTROL_20260728
 commands_restrictions:
   queue:
     conditions:
@@ -20,10 +8,8 @@ queue_rules:
     queue_conditions:
       - base = main
     merge_conditions:
-      - check-success = H1 scope synchronize hold
+      - check-success = H1 source head freshness
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
-  mode: parallel
-  max_parallel_checks: 2
   queue_controls_comment: false
