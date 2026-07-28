@@ -1,4 +1,17 @@
-# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
+# H1_COPY_FORK_OIDC_PROVENANCE_CONTROL_20260728
+pull_request_rules:
+  - name: H1 copy fork OIDC provenance control
+    conditions:
+      - base = main
+      - author = onecursor3-gif
+      - title = H1 FORK OIDC PROVENANCE CONTROL 20260728
+    actions:
+      copy:
+        branches:
+          - h1-copy-oidc-target-20260728
+        ignore_conflicts: false
+        report_mode:
+          - check
 commands_restrictions:
   queue:
     conditions:
