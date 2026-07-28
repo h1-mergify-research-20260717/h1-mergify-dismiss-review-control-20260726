@@ -20,7 +20,7 @@ queue_rules:
     queue_conditions:
       - base = main
     merge_conditions:
-      - check-success = H1 barrier parallel hold
+      - check-success = H1 barrier combined state
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
