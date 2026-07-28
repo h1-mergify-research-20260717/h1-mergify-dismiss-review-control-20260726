@@ -1,6 +1,8 @@
 name: H1 source head freshness
 
 
+
+
 on:
   pull_request:
   push:
@@ -8,8 +10,12 @@ on:
       - main
 
 
+
+
 permissions:
   contents: read
+
+
 
 
 jobs:
@@ -21,11 +27,13 @@ jobs:
       - name: Reject updated unsafe source head
         run: |
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            sleep 90
+            sleep 120
           fi
           if [[ -f h1-stale-head-unsafe.txt ]]; then
             echo "H1_STALE_SOURCE_HEAD_BROKEN_20260728"
             exit 1
           fi
           echo "H1_STALE_SOURCE_HEAD_SAFE_20260728"
+
+
 
