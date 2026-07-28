@@ -1,12 +1,11 @@
-# H1_PRIVATE_DEPENDENCY_PUBLIC_SUMMARY_CONTROL_20260728
+# H1_PRIVATE_DEPENDENCY_AUTOMATIC_REQUIREMENT_CONTROL_20260728
 pull_request_rules:
-  - name: H1 private dependency public summary control
+  - name: H1 private dependency automatic merge requirement
     conditions:
       - base = main
-      - depends-on = h1-mergify-research-20260717/h1-mergify-isolation-control-20260726#6
     actions:
-      comment:
-        message: H1_PRIVATE_DEPENDENCY_RESOLVED_CONTROL_20260728
+      merge:
+        method: squash
 commands_restrictions:
   queue:
     conditions:
