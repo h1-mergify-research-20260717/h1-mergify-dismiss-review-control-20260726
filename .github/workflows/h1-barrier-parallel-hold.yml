@@ -1,0 +1,18 @@
+name: H1 barrier parallel hold workflow
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  hold:
+    name: H1 barrier parallel hold
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hold speculative batch safely
+        run: |
+          sleep 45
+          echo "H1_BARRIER_PARALLEL_HOLD_FAILED_20260728"
+          exit 1
