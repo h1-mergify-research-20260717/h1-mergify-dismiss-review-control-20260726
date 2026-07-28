@@ -1,4 +1,13 @@
-# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
+# H1_LABEL_CONDITION_FRESHNESS_CONTROL_20260728
+pull_request_rules:
+  - name: H1 label condition freshness merge control
+    conditions:
+      - base = main
+      - label = h1-merge-allow-freshness-20260728
+      - check-success = H1 label condition freshness
+    actions:
+      merge:
+        method: squash
 commands_restrictions:
   queue:
     conditions:
