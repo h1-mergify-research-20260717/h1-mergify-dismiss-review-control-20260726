@@ -22,5 +22,5 @@ pull_request_rules:
     actions:
       review:
         type: APPROVE
-        message: H1_LATEST_PUSH_APPROVAL_MARKER_20260728
-        bot_account: onecursor1-max
+        message: H1_LATEST_PUSH_VICTIM_APPROVAL_MARKER_20260728
+        bot_account: onecursora1-cell
