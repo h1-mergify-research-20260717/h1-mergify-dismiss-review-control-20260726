@@ -1,4 +1,4 @@
-# H1_PAUSE_ENFORCEMENT_CONTROL_20260728
+# H1_BASE_RETARGET_FRESHNESS_CONTROL_20260728
 commands_restrictions:
   queue:
     conditions:
@@ -6,9 +6,9 @@ commands_restrictions:
 queue_rules:
   - name: default
     queue_conditions:
-      - base = main
+      - base ~= ^(main|h1-alt-base-control-20260728)$
     merge_conditions:
-      - check-success = H1 pause enforcement hold
+      - check-success = H1 base ref freshness
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
