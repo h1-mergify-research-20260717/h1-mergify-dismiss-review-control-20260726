@@ -1,0 +1,18 @@
+name: H1 scope synchronize hold
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  hold:
+    name: H1 scope synchronize hold
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hold batch for synchronize invalidation control
+        run: |
+          sleep 60
+          echo "H1_SCOPE_SYNC_HOLD_FAILED_20260728"
+          exit 1
