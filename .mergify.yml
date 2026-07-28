@@ -1,14 +1,13 @@
-# H1_BASE_RETARGET_FRESHNESS_CONTROL_20260728
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursor1-max
+      - sender = onecursora1-cell
 queue_rules:
   - name: default
     queue_conditions:
-      - base ~= ^(main|h1-alt-base-control-20260728)$
-    merge_conditions:
-      - check-success = H1 base ref freshness
+      - base = main
+    merge_conditions: []
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
