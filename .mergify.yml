@@ -1,29 +1,14 @@
-# H1_BARRIER_RENAME_ORIGIN_CONTROL_20260728
-scopes:
-  source:
-    files:
-      alpha:
-        include:
-          - h1-scope-alpha/**
-      beta:
-        include:
-          - h1-scope-beta/**
-  barrier_files:
-    include:
-      - h1-barrier-control/**
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursor3-gif
+      - sender = onecursora1-cell
 queue_rules:
   - name: default
     queue_conditions:
       - base = main
-    merge_conditions:
-      - check-success = H1 barrier combined state
+    merge_conditions: []
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
-  mode: parallel
-  max_parallel_checks: 2
   queue_controls_comment: false
