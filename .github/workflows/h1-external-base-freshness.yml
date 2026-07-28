@@ -1,0 +1,28 @@
+name: H1 external base freshness
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  freshness:
+    name: H1 external base freshness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject only the untested combined state
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            sleep 120
+          fi
+          if [[ -f h1-stale-base-a.txt && -f h1-external-base-x.txt ]]; then
+            echo "H1_EXTERNAL_BASE_COMBINED_STATE_BROKEN_20260728"
+            exit 1
+          fi
+          echo "H1_EXTERNAL_BASE_STATE_SAFE_20260728"
+
