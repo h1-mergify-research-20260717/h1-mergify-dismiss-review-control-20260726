@@ -1,11 +1,4 @@
-# H1_PRIVATE_DEPENDENCY_AUTOMATIC_REQUIREMENT_CONTROL_20260728
-pull_request_rules:
-  - name: H1 private dependency automatic merge requirement
-    conditions:
-      - base = main
-    actions:
-      merge:
-        method: squash
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
