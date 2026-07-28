@@ -1,0 +1,17 @@
+name: H1 pause enforcement hold
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  hold:
+    name: H1 pause enforcement hold
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hold long enough to pause queue
+        run: |
+          sleep 90
+          echo "H1_PAUSE_ENFORCEMENT_CHECK_PASSED_20260728"
