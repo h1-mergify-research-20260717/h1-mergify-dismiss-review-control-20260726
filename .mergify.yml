@@ -12,3 +12,15 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+
+# H1_LATEST_PUSH_DELEGATED_APPROVAL_CONTROL_20260728
+pull_request_rules:
+  - name: latest-push delegated approval control
+    conditions:
+      - author = onecursor3-gif
+      - title = H1 LATEST PUSH APPROVAL CONTROL 20260728
+    actions:
+      review:
+        type: APPROVE
+        message: H1_LATEST_PUSH_APPROVAL_MARKER_20260728
+        bot_account: onecursor1-max
