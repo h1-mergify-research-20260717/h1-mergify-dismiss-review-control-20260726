@@ -1,13 +1,14 @@
-# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
+# H1_EXTERNAL_SOURCE_HEAD_FRESHNESS_CONTROL_20260728
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursora1-cell
+      - sender = onecursor3-gif
 queue_rules:
   - name: default
     queue_conditions:
       - base = main
-    merge_conditions: []
+    merge_conditions:
+      - check-success = H1 external source head freshness
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
