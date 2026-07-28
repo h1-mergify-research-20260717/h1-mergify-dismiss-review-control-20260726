@@ -1,14 +1,17 @@
-# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
+# H1_EXTERNAL_BASE_RESET_CONTROL_20260728
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursora1-cell
+      - sender = onecursor1-max
 queue_rules:
   - name: default
     queue_conditions:
       - base = main
-    merge_conditions: []
-    branch_protection_injection_mode: merge
+    merge_conditions:
+      - check-success = H1 external base freshness
+    branch_protection_injection_mode: none
     merge_method: squash
 merge_queue:
+  mode: isolated
+  reset_on_external_merge: always
   queue_controls_comment: false
