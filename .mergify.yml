@@ -20,7 +20,7 @@ queue_rules:
     queue_conditions:
       - base = main
     merge_conditions:
-      - label = H1_NEVER_MERGE_BARRIER_RENAME_20260728
+      - check-success = H1 barrier parallel hold
     branch_protection_injection_mode: merge
     merge_method: squash
 merge_queue:
