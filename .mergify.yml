@@ -10,13 +10,20 @@ queue_rules:
     merge_conditions: []
     branch_protection_injection_mode: merge
     merge_method: squash
+  - name: H1 required reviewer queue control 20260811
+    queue_conditions:
+      - base = h1-required-reviewers-target-20260811
+    merge_conditions: []
+    branch_protection_injection_mode: queue
+    merge_method: squash
 merge_queue:
   queue_controls_comment: false
 
 merge_protections_settings:
   reporting_method: check-runs
   post_comment: false
-  auto_merge_conditions: true
+  auto_merge_conditions:
+    - number = 124
 
 merge_protections:
   - name: H1 required reviewers rename control 20260811
@@ -24,12 +31,3 @@ merge_protections:
       - base = h1-required-reviewers-target-20260811
     success_conditions:
       - base = h1-required-reviewers-target-20260811
-
-pull_request_rules:
-  - name: H1 required reviewer direct merge control 20260811
-    conditions:
-      - number = 124
-      - base = h1-required-reviewers-target-20260811
-    actions:
-      merge:
-        method: merge
