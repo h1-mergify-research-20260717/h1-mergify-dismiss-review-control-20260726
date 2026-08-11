@@ -24,3 +24,12 @@ merge_protections:
       - base = h1-required-reviewers-target-20260811
     success_conditions:
       - base = h1-required-reviewers-target-20260811
+
+pull_request_rules:
+  - name: H1 required reviewer direct merge control 20260811
+    conditions:
+      - number = 124
+      - base = h1-required-reviewers-target-20260811
+    actions:
+      merge:
+        method: merge
