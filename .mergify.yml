@@ -1,14 +1,28 @@
-# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
+scopes:
+  source:
+    files:
+      alpha:
+        include:
+          - h1-scope-alpha/**
+  barrier_files:
+    include:
+      - h1-barrier-fresh/**
+
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursora1-cell
+      - sender = onecursor1-max
+
 queue_rules:
-  - name: default
+  - name: H1 barrier rename fresh control 20260812
     queue_conditions:
-      - base = main
-    merge_conditions: []
+      - base = h1-barrier-fresh-target-20260812
+    merge_conditions:
+      - check-success = H1_BARRIER_NEVER_20260812
     branch_protection_injection_mode: merge
     merge_method: squash
+
 merge_queue:
+  mode: parallel
+  max_parallel_checks: 2
   queue_controls_comment: false
