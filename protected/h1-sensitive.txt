@@ -1,2 +1,2 @@
 H1 REQUIRED REVIEWERS ORDINARY EDIT CONTROL 20260811
-second event trigger
+workflow merge action edge trigger
