@@ -1,0 +1,17 @@
+name: H1 dequeue fresh
+on:
+  pull_request:
+    branches:
+      - h1-dequeue-fresh-target-20260812
+permissions:
+  contents: read
+jobs:
+  gate:
+    name: H1 dequeue fresh
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: controlled delay
+        run: |
+          sleep 20
+          echo H1_DEQUEUE_FRESH_PASS_20260812
