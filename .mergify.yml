@@ -12,3 +12,15 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+
+merge_protections_settings:
+  reporting_method: check-runs
+  post_comment: false
+  auto_merge_conditions: true
+
+merge_protections:
+  - name: H1 required reviewers rename control 20260811
+    if:
+      - base = h1-required-reviewers-target-20260811
+    success_conditions:
+      - base = h1-required-reviewers-target-20260811
