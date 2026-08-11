@@ -1,0 +1,27 @@
+name: H1 source head freshness fresh
+on:
+  pull_request:
+    branches:
+      - h1-source-fresh-target-20260812
+  push:
+    branches:
+      - h1-source-fresh-target-20260812
+permissions:
+  contents: read
+jobs:
+  freshness:
+    name: H1 source head freshness fresh
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: controlled freshness gate
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            sleep 45
+          fi
+          if [[ -f h1-source-fresh-unsafe-20260812.txt ]]; then
+            echo "H1_SOURCE_FRESH_BROKEN_20260812"
+            exit 1
+          fi
+          echo "H1_SOURCE_FRESH_SAFE_20260812"
