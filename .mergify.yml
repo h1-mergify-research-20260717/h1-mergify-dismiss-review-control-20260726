@@ -1,7 +1,14 @@
-pull_request_rules:
-  - name: H1 app-bound status injection readout 20260813
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
+commands_restrictions:
+  queue:
     conditions:
-      - base = h1-status-app-pin-target-20260813
-    actions:
-      merge:
-        method: merge
+      - sender = onecursora1-cell
+queue_rules:
+  - name: default
+    queue_conditions:
+      - base = main
+    merge_conditions: []
+    branch_protection_injection_mode: merge
+    merge_method: squash
+merge_queue:
+  queue_controls_comment: false
