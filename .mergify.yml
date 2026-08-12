@@ -1,7 +1,9 @@
 pull_request_rules:
-  - name: H1 environment recreate deployment identity 20260813
+  - name: H1 explicit deployment environment identity 20260813
     conditions:
       - base = h1-env-recreate-target-20260813
+      - deployment-success = H1_ENV_RECREATE_20260813
+      - label = H1_ENV_RECREATE_HOLD_20260813
     actions:
       merge:
         method: squash
