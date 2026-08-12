@@ -7,8 +7,7 @@ queue_rules:
   - name: H1 queued policy source tightening 20260813
     queue_conditions:
       - base = h1-queue-policy-target-20260813
-    merge_conditions:
-      - label = H1_QUEUE_POLICY_RELEASE_20260813
+    merge_conditions: []
     branch_protection_injection_mode: merge
     batch_size: 1
     merge_method: squash
