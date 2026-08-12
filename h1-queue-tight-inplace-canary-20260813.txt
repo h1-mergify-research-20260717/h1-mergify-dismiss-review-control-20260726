@@ -1,0 +1,1 @@
+H1 queued in-place tightening canary 20260813
