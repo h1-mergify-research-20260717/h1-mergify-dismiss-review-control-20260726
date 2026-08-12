@@ -1,14 +1,20 @@
-# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursora1-cell
+      - sender = onecursor1-max
+
 queue_rules:
-  - name: default
+  - name: H1 queued policy source tightening 20260813
     queue_conditions:
-      - base = main
-    merge_conditions: []
+      - base = h1-queue-policy-target-20260813
+    merge_conditions:
+      - label = H1_QUEUE_POLICY_RELEASE_20260813
     branch_protection_injection_mode: merge
+    batch_size: 1
     merge_method: squash
+
 merge_queue:
+  mode: serial
+  max_parallel_checks: 1
+  skip_intermediate_results: false
   queue_controls_comment: false
