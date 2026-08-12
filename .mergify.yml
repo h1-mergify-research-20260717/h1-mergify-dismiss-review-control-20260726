@@ -1,14 +1,17 @@
-# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursora1-cell
+      - sender = onecursor1-max
 queue_rules:
-  - name: default
+  - name: H1 queue review dismissal freshness 20260813
     queue_conditions:
-      - base = main
+      - base = h1-required-team-gate-target-20260812
     merge_conditions: []
     branch_protection_injection_mode: merge
+    batch_size: 1
     merge_method: squash
 merge_queue:
+  mode: serial
+  max_parallel_checks: 1
+  skip_intermediate_results: false
   queue_controls_comment: false
