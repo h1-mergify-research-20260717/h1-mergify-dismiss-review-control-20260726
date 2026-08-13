@@ -1,0 +1,1 @@
+H1 allowed merge methods canary 20260813
