@@ -1,0 +1,1 @@
+H1 strict static source canary 20260813
