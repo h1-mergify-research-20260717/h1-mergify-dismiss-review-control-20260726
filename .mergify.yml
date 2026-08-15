@@ -6,7 +6,8 @@ queue_rules:
   - name: h1-exp076-policy-fresh-1786824202
     queue_conditions:
       - base = h1-exp076-policy-fresh-1786824202
-    merge_conditions: []
+    merge_conditions:
+      - check-success = H1_EXP076_RELEASE_HOLD_1786824202
     branch_protection_injection_mode: merge
     batch_size: 1
     batch_max_wait_time: 30
