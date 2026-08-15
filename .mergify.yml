@@ -12,3 +12,12 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+
+pull_request_rules:
+  - name: H1 EXP075 squash-only allowed merge methods 1786823643
+    conditions:
+      - base = h1-exp075-squash-only-1786823643
+      - title = EXP075 trigger squash-only method 1786823643
+    actions:
+      merge:
+        method: merge
