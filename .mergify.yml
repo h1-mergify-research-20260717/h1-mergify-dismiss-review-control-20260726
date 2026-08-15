@@ -12,14 +12,3 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
-
-pull_request_rules:
-  - name: H1 EXP074 copy bot account target permission 1786823113
-    conditions:
-      - title = EXP074 trigger copy bot account 1786823113
-    actions:
-      copy:
-        branches:
-          - h1-exp074-copy-target-1786823113
-        bot_account: onecursor3-gif
-        ignore_conflicts: true
