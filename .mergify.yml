@@ -12,12 +12,3 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
-
-pull_request_rules:
-  - name: H1 EXP098 layered reviews 1786854836
-    conditions:
-      - base = h1-exp098-layering-1786854836
-      - title = EXP098 trigger layered reviews 1786854836
-    actions:
-      merge:
-        method: squash
