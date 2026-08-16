@@ -1,18 +1,14 @@
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursor1-max
+      - sender = onecursora1-cell
 queue_rules:
-  - name: h1-exp108-token-boundary-1786867510
+  - name: default
     queue_conditions:
-      - base = h1-exp108-target-1786867510
-    merge_conditions:
-      - check-success = H1_EXP108_HOLD_1786867510
+      - base = main
+    merge_conditions: []
     branch_protection_injection_mode: merge
-    batch_size: 1
-    merge_method: merge
+    merge_method: squash
 merge_queue:
-  mode: serial
-  max_parallel_checks: 1
-  skip_intermediate_results: false
   queue_controls_comment: false
