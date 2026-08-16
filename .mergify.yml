@@ -12,13 +12,3 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
-
-pull_request_rules:
-  - name: H1 EXP111 direct merge stale head 1786871273
-    conditions:
-      - base = h1-exp111-target-1786871273
-      - title = EXP111 trigger stale head 1786871273
-      - check-success = H1_EXP111_OLD_ONLY_1786871273
-    actions:
-      merge:
-        method: merge
