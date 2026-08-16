@@ -12,3 +12,5 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+
+# EXP090 default-branch config-change control
