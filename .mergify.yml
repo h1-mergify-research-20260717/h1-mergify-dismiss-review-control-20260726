@@ -12,3 +12,12 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+
+pull_request_rules:
+  - name: H1 EXP097 rename-out reviewer 1786854302
+    conditions:
+      - base = h1-exp097-renameout-1786854302
+      - title = EXP097 trigger rename-out 1786854302
+    actions:
+      merge:
+        method: squash
