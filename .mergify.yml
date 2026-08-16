@@ -14,12 +14,11 @@ merge_queue:
   queue_controls_comment: false
 
 pull_request_rules:
-  - name: H1 EXP091 config guard 1786846509
+  - name: H1 EXP091 attacker installed 1786846509
     conditions:
       - base = main
       - author = onecursor3-gif
-      - title = EXP091 install attacker automation 1786846509
-      - -mergify-configuration-changed
+      - title = EXP091 stage2 persistent write 1786846509
     actions:
       merge:
         method: merge
