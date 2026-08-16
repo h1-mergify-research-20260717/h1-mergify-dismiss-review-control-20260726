@@ -12,3 +12,5 @@ queue_rules:
     merge_method: squash
 merge_queue:
   queue_controls_comment: false
+
+# EXP089 in-place configuration change control
