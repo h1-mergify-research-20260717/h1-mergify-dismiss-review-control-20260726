@@ -1,20 +1,14 @@
+# H1_QUEUE_APPROVAL_REVOCATION_CONTROL_20260727
 commands_restrictions:
   queue:
     conditions:
-      - sender = onecursor1-max
+      - sender = onecursora1-cell
 queue_rules:
-  - name: sg-exp094-1787045711
+  - name: default
     queue_conditions:
-      - base = sg-exp094-target-1787045711
-    merge_conditions:
-      - check-success = SG_EXP094_RELEASE_1787045711
+      - base = main
+    merge_conditions: []
     branch_protection_injection_mode: merge
-    batch_size: 1
-    batch_max_wait_time: 30
-    merge_method: merge
-    allow_queue_branch_edit: false
+    merge_method: squash
 merge_queue:
-  mode: serial
-  max_parallel_checks: 1
-  skip_intermediate_results: false
   queue_controls_comment: false
